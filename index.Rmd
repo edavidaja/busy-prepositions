@@ -1,0 +1,31 @@
+---
+title: "busy prepositions"
+author: "S. Rockhouse"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## sent *by* connect
+
+```{r}
+library(blastula)
+render_connect_email("blastula.Rmd") |>
+  attach_connect_email(subject = "busy busy busy", attach_output = TRUE)
+```
+
+## sent from connect
+
+but by me
+
+```{r, eval=FALSE}
+library(gmailr)
+test_email <-
+  gm_mime() %>%
+  gm_to("david@rstudio.com") %>%
+  gm_from("david@posit.co") %>%
+  gm_subject("if you try then you can fly") %>%
+  gm_text_body("over the rainbow")
+
+# If all is good with your draft, then you can send it
+gm_send_message(test_email)
+```

@@ -1,0 +1,10 @@
+---
+title: "busy busy busy"
+author: "S. Rockhouse"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+you've got mail.
+
+![](https://source.unsplash.com/1920x1080/?mail "you've got mail.")
